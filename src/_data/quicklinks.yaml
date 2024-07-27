@@ -1,13 +1,4 @@
 links:
-  - title: Sample Link
-    url: https://www.netlifycms.org/
-    desc: "Sample Description Sample Description "
-  - title: Sample Link
-    url: https://www.11ty.dev/
-    desc: "Sample Description Sample Description "
-  - title: Sample Link
-    url: https://github.com/alpinejs/alpine
-    desc: "Sample Description Sample Description "
-  - title: Sample Link
-    url: https://tailwindcss.com/
-    desc: "Sample Description Sample Description "
+  - title: Boyscouting Life
+    url: /posts/bigger-images/
+    desc: "-"
