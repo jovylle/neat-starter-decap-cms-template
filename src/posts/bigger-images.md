@@ -1,5 +1,5 @@
 ---
-title: Bigger Images
+title: Post with Images
 description: "-"
 author: "-"
 date: 2024-07-27T10:38:24.839Z
