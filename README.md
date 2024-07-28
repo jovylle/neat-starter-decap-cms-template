@@ -2,6 +2,8 @@
 | ![image](https://user-images.githubusercontent.com/1884712/93762662-a62e4700-fc2d-11ea-9b2c-fda9f503402b.png) |
 | ------------------------------------------------------------------------------------------------------------- |
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/jovylle/neat-starter-decap-cms-template&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+
 ## Getting Started
 
 ### 1\. Clone this Repository
