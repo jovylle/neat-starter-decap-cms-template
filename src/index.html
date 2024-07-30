@@ -3,18 +3,21 @@ layout: default
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+<div class="container mx-auto lg:min-h-screen flex flex-col justify-center items-center lg:py-40">
   <h1>
     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{settings.hometitle}}
+      {{ home.title }}
     </strong>
   </h1>
-
   <p>
     <!-- <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr> -->
-    {{settings.homedescription}}
+    {{home.description}}
     <!-- <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code> -->
   </p>
-
+  
   {% include "./_includes/partials/content.html" %}
+  
+  <article class="prose lg:prose-xl my-4 mx-auto">
+    {{ home.body | markdown | safe}}
+  </article>
 </div>
