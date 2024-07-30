@@ -1,0 +1,20 @@
+---
+layout: default
+prism: true
+---
+
+<div class="container max-w-4xl mt-6  px-6 text-center ">
+    <div class="py-28 space-y-4">
+        <h1>
+            <strong class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-black">
+                {{title}}
+            </strong>
+        </h1>
+        <p>
+            {{description}}
+        </p>
+    </div>
+    <article class="prose lg:prose-xl my-4 mx-auto">
+        {{ content | safe }}
+    </article>
+</div>
