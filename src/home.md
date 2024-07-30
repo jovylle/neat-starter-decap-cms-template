@@ -1,10 +1,7 @@
 ---
-title: Post with Images
-description: "-"
-author: "-"
+title: Embrace the Great Outdoors
+description: "Let's get lost in nature and find ourselves"
 date: 2024-07-27T10:38:24.839Z
-tags:
-  - Tags
 ---
 ![](/static/img/363487252_184898594595146_8651245057378479597_n.jpg)
 

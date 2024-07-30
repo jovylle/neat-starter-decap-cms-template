@@ -1,3 +1,5 @@
 items:
-  - text: Blog
+  - text: Home
+    url: /home
+  - text: Posts
     url: /blog
