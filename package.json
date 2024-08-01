@@ -2,6 +2,7 @@
   "scripts": {
     "start": "npm-run-all --parallel css eleventy browsersync",
     "eleventy": "eleventy --watch",
+    "admin": "npx netlify-cms-proxy-server",
     "debug": "set DEBUG=* & eleventy",
     "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o _site/static/css/style.css",
