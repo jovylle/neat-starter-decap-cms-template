@@ -38,6 +38,12 @@ npm run build
 npm run start
 ```
 
+### 6\. Run the Netlify CMS Proxy Server for Local Backend
+
+```
+npx netlify-cms-proxy-server
+```
+
 
 credits tos
 Surj( [@surj](https://surjithctly.in/) )

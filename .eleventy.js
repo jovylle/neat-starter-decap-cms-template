@@ -26,6 +26,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("markdown", (content) => {
     return md.render(content);
   });
+  
+
+  eleventyConfig.addFilter("stringify", function (obj) {
+    return JSON.stringify(obj, null, 2);
+  });
+
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -63,6 +69,24 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Create custom pages collection
+  eleventyConfig.addCollection("customPages", function (collectionApi) {
+    const pages = collectionApi.getFilteredByGlob("src/*.md");
+    console.log('Collected Pages:', pages.map(p => p.data.title)); // Log to see what is collected
+    // return pages;
+    return pages.map(page => ({
+      title: page.data.title,
+      url: page.url,                       // Url automatically provided by Eleventy
+      slug: page.data.slug || '',          // Include the slug if available
+    }));
+  
+  });
+
+  // You don't typically need to add global data in this context for collections
+  // Collections are naturally available to your templates via `collections`
+
+    // Configuration for directory input and templating engine
+  
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {

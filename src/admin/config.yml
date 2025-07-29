@@ -37,7 +37,7 @@ collections:
       preview: false
     files:
       - label: "Navigation"
-        name: "items"
+        name: "navigation_settings"
         file: "src/_data/navigation.yaml"
         fields:
           - label: Nav Items
@@ -47,22 +47,22 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
+      - label: "Footer Settings"
+        name: "footer_settings"
+        file: "src/_data/footer_settings.yaml"
         fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+          - { label: Name, name: name, widget: string, required: false }
+          - { label: Author, name: author, widget: string, required: false }
+          - { label: URL, name: url, widget: string, required: false }
       - label: "Home Settings"
-        name: "home"
+        name: "home_settings"
         file: "src/_data/home.yaml"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Quick Links"
-        name: "links"
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - label: "Quick Links (Optional, visible on home page)"
+        name: "quick_links"
         file: "src/_data/quicklinks.yaml"
         fields:
           - label: "Nav Items"
@@ -73,3 +73,22 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Description", name: "desc", widget: "string", required: false}
+  - label: "Pages"  # New collection for custom pages
+    name: "pages"
+    folder: "src"  # Specify the folder for custom pages
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }  # Dynamic link
+      - 
+        label: "Layout"   # The label for the layout selection
+        name: "layout"    # The name that will be referenced in the markdown
+        widget: "select"  # Specifies that this will be a dropdown list
+        options:          # List all available layouts here
+          - default      # Example layout option
+          - pages        # Add the specific layout names you're using
+          # Add other layouts as needed
+        default: pages
+      - { label: "Body", name: "body", widget: "markdown" }
